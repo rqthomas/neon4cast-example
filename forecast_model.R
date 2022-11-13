@@ -7,7 +7,7 @@ library(glue)
 source("ignore_sigpipe.R")
 
 forecast_date <- Sys.Date()
-noaa_date <- Sys.Date() - days(3)  #Need to use yesterday's NOAA forecast because today's is not available yet
+noaa_date <- Sys.Date() - days(1)  #Need to use yesterday's NOAA forecast because today's is not available yet
 
 # Step 0: Define a unique name which will identify your model in the leaderboard and connect it to team members info, etc
 model_id <- "air2waterSat_2"
