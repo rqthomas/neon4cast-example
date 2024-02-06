@@ -20,7 +20,7 @@ site_data <- readr::read_csv(paste0("https://raw.githubusercontent.com/eco4cast/
   dplyr::filter(aquatics == 1)
 
 
-# Step 2: Get meterological predictions as drivers
+# Step 2: Get meteorological predictions as drivers
 df_past <- neon4cast::noaa_stage3()
 
 ## Helper function: for each site, average over predicted 0h horizon ensembles to get 'historic values'
