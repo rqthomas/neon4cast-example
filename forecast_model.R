@@ -41,8 +41,8 @@ noaa_mean_historical <- function(df_past, site, var) {
 
 ## Helper fn: get daily average temperature from each ensemble in future
 noaa_mean_forecast <- function(site, var, reference_date) {
-  endpoint = "data.ecoforecast.org"
-  bucket <- glue::glue("neon4cast-drivers/noaa/gefs-v12/stage1/0/{reference_date}")
+  endpoint = "sdsc.osn.xsede.org"
+  bucket <- glue::glue("bio230014-bucket01/neon4cast-drivers/noaa/gefs-v12/stage2/reference_datetime={reference_date}")
   s3 <- arrow::s3_bucket(bucket, endpoint_override = endpoint, anonymous = TRUE)
   
   # stage1 air temp is Celsius
